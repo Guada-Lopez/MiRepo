@@ -411,13 +411,19 @@
 
     article{
         grid-area: article;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px;
 
         .acc{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 20px;
+            width: 250px; 
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-evenly;
+            // align-items: center;
+            // margin: 20px;
         }
 
         img{
@@ -464,21 +470,19 @@
     @media (min-width: 700px){
         article{
             grid-area: article;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 20px;
 
-            #acc1{
-                display: flex;
-                flex-direction: row;
-            }
-
-            #acc2{
-                display: flex;
-                flex-direction: row;
+            .acc{
+                width: 250px;
             }
         }
     }
-
-    
-}
+}       
+     
 
 // NOSOTROS
 
