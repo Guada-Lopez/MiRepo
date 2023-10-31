@@ -1,0 +1,508 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// INDEX
+
+
+#contenedorprincipal{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px auto auto 200px;
+    grid-template-areas: 
+    "header"
+    "aside"
+    "article"
+    "footer";
+
+
+    header{
+
+        @include header-grid;
+      
+        img{
+            width: 80px;
+            grid-area: logo;
+        }
+
+        nav{
+            grid-area: opciones;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: medium;
+                &:hover{
+                    color: orange;
+                }
+                
+            }
+        }
+
+        .buscador{
+        grid-area: buscador;
+        }
+    }
+
+    aside{
+        grid-area: aside;
+    
+        img{
+        width: 100%;
+        }
+    }
+
+    
+    article{
+        grid-area: article;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    
+        img{
+            width: 120px;
+        }
+    }
+
+    footer{
+
+        @include footer-flex;
+    
+        img{
+            width: 60px;
+        }
+
+        h5{
+            color: white;
+        }
+
+        .icon{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+    
+    }    
+
+    @media (min-width: 600px){
+        #contenedorprincipal{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 150px auto auto 200px;
+            grid-template-areas:
+            "header header"
+            "aside aside"
+            "article article"
+            "footer footer";
+        }
+        header{
+            grid-template-columns: 1fr 3fr 2fr;
+            grid-template-rows: 1fr;
+            grid-template-areas:
+            "logo opciones buscador";
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        article{
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    
+    }
+
+}
+
+// INDUMENTARIA
+
+#contenedorind{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px auto auto 200px;
+    grid-template-areas:
+    "header"
+    "article"
+    "article"
+    "footer";
+
+    header{
+        @include header-grid;
+    
+        img{
+            width: 80px;
+            grid-area: logo;
+        }
+
+        nav{
+            grid-area: opciones;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+            
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: medium;
+                &:hover{
+                    color: orange;
+                }
+            }
+        }
+
+        button{
+        grid-area: buscador;
+        }
+    }
+
+    article{
+        grid-area: article;
+
+        .indu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 20px;
+        }
+
+
+        img{
+            width: 150px;
+        }
+    }
+
+    footer{
+ 
+        @include footer-flex;
+        
+        img{
+            width: 60px;
+        }
+
+        h5{
+            color: white;
+        }
+
+        .icon{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 30px;
+           
+        }
+    }
+
+    @media (min-width: 600px){
+        #contenedorprincipal{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 150px auto auto 200px;
+            grid-template-areas:
+            "header header"
+            "aside aside"
+            "article article"
+            "footer footer";  
+        }
+
+        header{
+            grid-template-columns: 1fr 3fr 2fr;
+            grid-template-rows: 1fr;
+            grid-template-areas:
+            "logo opciones buscador";
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+    }
+
+    @media (min-width: 700px){
+        article{
+            grid-area: article;
+        
+            .indu{
+                display: flex;
+                flex-direction: row;
+            }
+
+            img{
+                display: flex;
+                flex-direction: column;
+            }
+
+
+        }
+    }
+
+
+   
+
+}
+
+// CALZADO
+
+#contenedorcal{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px auto auto 200px;
+    grid-template-areas:
+    "header"
+    "article"
+    "article"
+    "footer";
+
+    header{
+        @include header-grid;
+
+        img{
+            grid-area: logo;
+            width: 80px;
+        }
+
+        nav{
+            grid-area: opciones;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+    
+
+            a{
+                text-decoration: none;
+                color: white;
+                
+               
+            }
+        }
+
+        .buscador{
+            grid-area: buscador;
+        }
+
+    }
+
+    article{
+        grid-area: article;
+
+        .calz1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 20px;
+        }
+
+        .calz2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 20px;
+        }
+
+
+        img{
+            width: 150px;
+        }
+    }
+
+    
+    
+
+    footer{
+        
+        @include footer-flex;
+
+        img{
+            width: 60px;
+        }
+
+        h5{
+            color: white;
+        }
+    }
+
+
+    @media (min-width: 600px){
+        #contenedorprincipal{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 150px auto auto 200px;
+            grid-template-areas:
+            "header header"
+            "aside aside"
+            "article article"
+            "footer footer";  
+        }
+
+        header{
+            grid-template-columns: 1fr 3fr 2fr;
+            grid-template-rows: 1fr;
+            grid-template-areas:
+            "logo opciones buscador";
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+
+    @media (min-width: 700px){
+        article{
+            grid-area: article;
+        
+            .calz1{
+                display: flex;
+                flex-direction: row;
+
+                .tab{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+            .calz2{
+                display: flex;
+                flex-direction: row;
+            }
+    }
+    }
+}
+// ACCESORIOS
+
+#contcuar{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px auto auto 200px;
+    grid-template-areas:
+    "header"
+    "article"
+    "article"
+    "footer";
+
+    header{
+        @include header-grid;
+
+        img{
+            grid-area: logo;
+            width: 80px;
+            
+        }
+
+        nav{
+            grid-area: opciones;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .buscador{
+            grid-area: buscador;
+        }
+
+        }
+
+    article{
+        grid-area: article;
+
+        .acc{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 20px;
+        }
+
+        img{
+            width: 150px;
+            padding: 5px;
+        }
+    }
+
+    footer{
+        @include footer-flex;
+        
+        img{
+            width: 60px;
+        }
+
+        h5{
+            color: white;
+        }
+    }
+
+    @media (min-width: 600px){
+        #contenedorprincipal{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 150px auto auto 200px;
+            grid-template-areas:
+            "header header"
+            "aside aside"
+            "article article"
+            "footer footer";  
+        }
+
+        header{
+            grid-template-columns: 1fr 3fr 2fr;
+            grid-template-rows: 1fr;
+            grid-template-areas:
+            "logo opciones buscador";
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+
+    }
+
+    @media (min-width: 700px){
+        article{
+            grid-area: article;
+
+            #acc1{
+                display: flex;
+                flex-direction: row;
+            }
+
+            #acc2{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+
+    
+}
+
+// NOSOTROS
+
+.container-fluid{
+    background-image: $color !important;
+    height: 150px !important;
+
+    .nav-item{
+
+        a{
+            color: white !important;
+        }
+    }
+}
+
+.footer{
+    @include footer-flex;
+
+    img{
+        width: 60px;
+    }
+
+    h5{
+        color: white;
+    }
+
+}
