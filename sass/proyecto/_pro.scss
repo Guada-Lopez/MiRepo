@@ -68,6 +68,16 @@
         img{
             width: 120px;
         }
+
+        .ind{
+            border: 2px solid gray;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 10px;
+            &:hover{
+                box-shadow: 5px 5px gray;
+            }
+        }
     }
 
     footer{
@@ -108,6 +118,12 @@
             "logo opciones buscador";
             justify-content: space-evenly;
             align-items: center;
+
+            nav{
+                a{
+                    font-size: large;
+                }
+            }
         }
         article{
             flex-direction: row;
@@ -149,6 +165,7 @@
                 text-decoration: none;
                 color: white;
                 font-size: medium;
+
                 &:hover{
                     color: orange;
                 }
@@ -162,18 +179,34 @@
 
     article{
         grid-area: article;
-
-        .indu{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        margin: 20px;
+
+        .indu{
+            width: 300px;
         }
 
+        .indu1{
+            width: 300px;
+        }
+
+        .cardi{
+            border: 2px solid gray;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 10px;
+            &:hover{
+                box-shadow: 5px 5px gray;
+            }
+        }
 
         img{
             width: 150px;
+            &:hover{
+                transform: scale(1.1)
+            }
         }
     }
 
@@ -216,6 +249,13 @@
             "logo opciones buscador";
             justify-content: space-evenly;
             align-items: center;
+
+            nav{
+                a{
+                    font-size: large;
+                }
+            }
+
         }
 
     }
@@ -223,15 +263,25 @@
     @media (min-width: 700px){
         article{
             grid-area: article;
-        
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
             .indu{
-                display: flex;
-                flex-direction: row;
+                width: 200px;
+                margin: 30px;
+                
+            }
+
+            .indu1{
+                width: 200px;
+                margin: 30px;
+                
             }
 
             img{
-                display: flex;
-                flex-direction: column;
+                width: 150px;
             }
 
 
@@ -275,7 +325,11 @@
                 text-decoration: none;
                 color: white;
                 
-               
+
+                &:hover{
+                    color: orange;
+                   
+                }
             }
         }
 
@@ -287,26 +341,36 @@
 
     article{
         grid-area: article;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
 
         .calz1{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            margin: 20px;
+            width: 200px;
         }
 
         .calz2{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            margin: 20px;
+            width: 200px;
         }
 
+        .cardc{
+            border: 2px solid gray;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 10px;
+            &:hover{
+                box-shadow: 5px 5px gray;
+            }
+        }
 
         img{
             width: 150px;
+            &:hover{
+                transform: scale(1.1)
+            }
         }
     }
 
@@ -345,28 +409,29 @@
             "logo opciones buscador";
             justify-content: space-evenly;
             align-items: center;
+
+            a{
+                font-size: large;
+            }
         }
     }
 
     @media (min-width: 700px){
         article{
             grid-area: article;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
         
             .calz1{
-                display: flex;
-                flex-direction: row;
-
-                .tab{
-                    display: flex;
-                    flex-direction: column;
-                }
+                width: 200px;
             }
 
             .calz2{
-                display: flex;
-                flex-direction: row;
+                width: 200px;
             }
-    }
+        }
     }
 }
 // ACCESORIOS
@@ -400,6 +465,9 @@
             a{
                 text-decoration: none;
                 color: white;
+                &:hover{
+                    color: orange;
+                }
             }
         }
 
@@ -413,22 +481,35 @@
         grid-area: article;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
-        margin: 20px;
+
+
+
+        .acc1{
+            width: 200px;
+        }
+
+        .acc2{
+            width: 200px;
+        }
 
         .acc{
-            width: 250px; 
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: space-evenly;
-            // align-items: center;
-            // margin: 20px;
+            border: 2px solid gray;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 10px;
+            &:hover{
+                box-shadow: 5px 5px gray;
+            }
         }
 
         img{
             width: 150px;
-            padding: 5px;
+            &:hover{
+                transform: scale(1.1)
+            }
+       
         }
     }
 
@@ -462,10 +543,17 @@
             "logo opciones buscador";
             justify-content: space-evenly;
             align-items: center;
+
+            a{
+                font-size: large
+                
+                ;
+            }
+            }
         }
 
 
-    }
+
 
     @media (min-width: 700px){
         article{
@@ -474,27 +562,36 @@
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
-            margin: 20px;
+        
+            .acc1{
+                width: 200px;
+            }
 
-            .acc{
-                width: 250px;
+            .acc2{
+                width: 200px;
             }
         }
     }
-}       
-     
+}
 
 // NOSOTROS
 
 .container-fluid{
     background-image: $color !important;
-    height: 150px !important;
+    height: 200px !important;
 
     .nav-item{
 
         a{
             color: white !important;
+            &:hover{
+                color: orange !important
+            }
         }
+    }
+
+    h4{
+        padding-left: 30px;
     }
 }
 
